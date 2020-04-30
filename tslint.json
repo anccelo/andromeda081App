@@ -19,7 +19,7 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "ast081",
       "camelCase"
     ],
     "component-selector": [

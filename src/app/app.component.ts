@@ -11,7 +11,7 @@ import {PLANETS} from './mock-planets';
 
 export class AppComponent implements OnInit {
   title = 'Solar system planets';
-  private planets: Planet[];
+  public planets: Planet[];
 
   ngOnInit() {
     this.planets = PLANETS;
