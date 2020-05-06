@@ -1,18 +1,18 @@
-import {Directive, ElementRef, Input, HostListener} from '@angular/core';
+import {Directive, ElementRef, HostListener, Input} from '@angular/core';
 
 @Directive({
-  selector: '[ast081BorderCard]'
+  selector: '[and081BorderCard]'
 })
 export class BoarderCardDirective {
   private initialColor = '#f5f5f5';
   private defaultColor = '#009688';
-  // private defaultHeight = 160;
+  private defaultHeight = 190;
 
   constructor(private el: ElementRef) { // el é l'elemento selezionato nel DOM
     this.setBorder(this.initialColor);
     // this.setHeight(this.defaultHeight);
   }
-  @Input('ast081BorderCard')
+  @Input('and081BorderCard')
   borderColor: string;
 
   @HostListener('mouseenter')
@@ -25,11 +25,8 @@ export class BoarderCardDirective {
     this.setBorder(this.initialColor);
   }
 
-
-
   private setBorder(color: string){
-    const border = 'solid 4px ' + color;
-    this.el.nativeElement.style.border = border;
+    this.el.nativeElement.style.border = 'solid 4px ' + color;
   }
   private setHeight(height: number){
     this.el.nativeElement.style.height = height + 'px';

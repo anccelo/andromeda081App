@@ -19,11 +19,11 @@
     "directive-selector": [
       true,
       "attribute",
-      "ast081",
+      "and081",
       "camelCase"
     ],
     "component-selector": [
-      true,
+      false,
       "element",
       "app",
       "kebab-case"
