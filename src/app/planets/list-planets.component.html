@@ -1,0 +1,17 @@
+<h1 class='center'>{{ title }}</h1>
+<div class='container'>
+  <div class="row">
+    <div *ngFor='let planet of planets' class="col s6 m4">
+      <div class="card horizontal" (click)="selectPlanet(planet)" and081BorderCard='blue'>
+        <div class="card-image">
+          <img [src]="planet.picture" [alt]="'planet ' + planet.name">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <span class = '{{ planet.name | planetNameColor }}'>{{planet.name}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

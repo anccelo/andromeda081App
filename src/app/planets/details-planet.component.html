@@ -1,0 +1,30 @@
+<div *ngIf="planet" class="row">
+  <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{ planet.name }}</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-image">
+        <img [src]="planet.picture">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+            <tr>
+              <td>Name</td>
+              <td><strong>{{ planet.name }}</strong></td>
+            </tr>
+            <tr>
+              <td>Position from the sun</td>
+              <td><strong>{{ planet.id }} </strong></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-action">
+          <a (click)="goBack()">Retour</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 *ngIf='!planet' class="center">No planet to display!</h4>

@@ -34,7 +34,7 @@ export const PLANETS: Planet[] = [
     id: 8,
     name: 'Neptune',
     picture: '../assets/img/Planets/Neptune.jpg'
-  },
+  }
 ];
 
 
