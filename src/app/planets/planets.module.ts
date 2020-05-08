@@ -5,6 +5,7 @@ import {PlanetsRoutingModule} from './planets-routing.module';
 import {ListPlanetsComponent} from './list-planets.component';
 import {DetailsPlanetComponent} from './details-planet.component';
 
+import {PlanetsService} from './planets.service';
 import {BoarderCardDirective} from './boarder-card.directive';
 import {PlanetNameColorPipe} from './planet-color.pipe';
 
@@ -20,7 +21,8 @@ import {PlanetNameColorPipe} from './planet-color.pipe';
     PlanetNameColorPipe
   ],
   exports: [
-  ]
+  ],
+  providers: [PlanetsService]
 })
 export class PlanetsModule {
 }

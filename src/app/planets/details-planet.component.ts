@@ -1,32 +1,29 @@
 import {Component, OnInit} from '@angular/core';
-import { ActivatedRoute, Router, Params } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
-import { Planet } from './planet';
-import { PLANETS } from './mock-planets';
+import {Planet} from './planet';
+import {PlanetsService} from './planets.service';
 
 @Component({
   selector: 'app-details-planet',
   templateUrl: './details-planet.component.html'
 })
 
-export class DetailsPlanetComponent implements OnInit{
+export class DetailsPlanetComponent implements OnInit {
 
- planet: Planet = null;
- planets: Planet[] = null;
+  planet: Planet = null;
 
-  constructor(private router: Router, private route: ActivatedRoute ) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private planetsService: PlanetsService) {
+  }
 
   ngOnInit(): void {
-    this.planets = PLANETS;
-
     const id = +this.route.snapshot.paramMap.get('id');
-    // tslint:disable-next-line:prefer-for-of
-    for (let i = 0; i < this.planets.length; i++) {
-      if (this.planets[i].id === id) {
-        this.planet = this.planets[i];
-      }
-    }
+    this.planet = this.planetsService.getPlanet(id);
   }
+
   goBack(): void {
     this.router.navigate(['/planets']);
   }
