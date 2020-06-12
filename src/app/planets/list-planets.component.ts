@@ -19,7 +19,7 @@ export class ListPlanetsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.planets = this.planetsService.getPlanets();
+    this.planetsService.getPlanets().subscribe(planets => this.planets = planets);
   }
 
   selectPlanet(planet: any) {

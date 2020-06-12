@@ -21,12 +21,13 @@ export class DetailsPlanetComponent implements OnInit {
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.planet = this.planetsService.getPlanet(id);
+    this.planetsService.getPlanet(id).subscribe(planet => this.planet = planet);
   }
 
   goBack(): void {
     this.router.navigate(['/planets']);
   }
+
 }
 
 
