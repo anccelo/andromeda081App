@@ -28,6 +28,11 @@ export class PlanetsService {
     );
   }
 
+  setPicture(planets: Planet[]) {
+    const picturePathBase = 'src\\assets\\img\\planetspng\\';
+    planets.forEach(planet => planet.picture = picturePathBase.concat(planet.name));
+  }
+
   private log(log: string) {
     console.log(log);
   }

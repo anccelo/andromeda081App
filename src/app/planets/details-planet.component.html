@@ -1,18 +1,14 @@
 <div *ngIf="planet" class="row">
   <div class="col s12 m8 offset-m2">
     <h2 class="header center">{{ planet.name }}</h2>
-    <div class="card horizontal hoverable">
+    <div class="card horizontal hoverable" style="background-color: lavender">
       <div class="card-image">
-        <img [src]="planet.picture">
+        <img [src]="'../assets/img/planetspng/' + planet.name.toLowerCase() +'.png'" [alt]="'planet ' + planet.name">
       </div>
       <div class="card-stacked">
         <div class="card-content">
           <table class="bordered striped">
             <tbody>
-            <tr>
-              <td>Name</td>
-              <td><strong>{{ planet.name }}</strong></td>
-            </tr>
             <tr>
               <td>Position from the sun</td>
               <td><strong>{{ planet.orderToSun }} </strong></td>
