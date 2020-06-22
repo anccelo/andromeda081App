@@ -12,6 +12,7 @@ import {PlanetsService} from './planets.service';
 export class ListPlanetsComponent implements OnInit {
   title = 'Solar System Planets';
   public planets: Planet[];
+  order = 'orderToSun';
 
   constructor(
     private router: Router,

@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import { OrderModule } from 'ngx-order-pipe';
 
 import {PlanetsModule} from './planets/planets.module';
 
@@ -15,6 +16,7 @@ import {Page404Component} from './page-404.component';
   ],
   imports: [
     BrowserModule,
+    OrderModule,
     PlanetsModule,
     HttpClientModule,
     AppRoutingModule

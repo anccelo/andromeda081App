@@ -1,7 +1,7 @@
 <h1 class='center'>{{ title }}</h1>
 <div class='container'>
   <div class="row" >
-    <div *ngFor='let planet of planets' class="col s6 m4">
+    <div *ngFor='let planet of planets | orderBy: order' class="col s6 m4">
       <div class="card horizontal" (click)="selectPlanet(planet)" and081BorderCard='blue' style="background-color: lavender">
         <div class="card-image">
           <img [src]="'../assets/img/planetspng/' + planet.name.toLowerCase() +'.png'" [alt]="'planet ' + planet.name">

@@ -8,12 +8,14 @@ import {DetailsPlanetComponent} from './details-planet.component';
 import {PlanetsService} from './planets.service';
 import {BoarderCardDirective} from './boarder-card.directive';
 import {PlanetNameColorPipe} from './planet-color.pipe';
+import {OrderModule} from 'ngx-order-pipe';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    PlanetsRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        PlanetsRoutingModule,
+        OrderModule
+    ],
   declarations: [
     ListPlanetsComponent,
     DetailsPlanetComponent,
